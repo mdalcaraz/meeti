@@ -16,10 +16,10 @@ const db = require('./config/db');
     require('./models/Comentarios');
     require('./models/Grupos');
     require('./models/Meeti');
-    db.sync({ force: true }).then(() => console.log('DB Conectada')).catch((error) => console.log(error));
+    db.sync({ force: false }).then(() => console.log('DB Conectada')).catch((error) => console.log(error));
 
 // Variables de Desarrollo
-require('dotenv').config({path: 'variables.env'});
+require('dotenv').config({path: '.env'});
 
 
 // Aplicación Principal
